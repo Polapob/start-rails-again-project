@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+<h1>Show List of Friends</h1>
+<table id="friends" class = "table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope= "col">Twitter</th>
+      <th scope= "col">User ID</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @friends.each do |friend| %>
+      <%= render friend %>
+    <% end %>
+  </tbody>
+</table>
+<div>
+  <%= link_to "New friend", new_friend_path %>
+</div>
+<% else %>
+<h1>Hello World
+  Welcome to ruby on rails
+</h1>
+<div>This is my first rails webpage.</div>
+
+
+<% end %>

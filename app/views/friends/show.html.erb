@@ -1,0 +1,24 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+   <div class="card-title bold">First name: <%= @friend.first_name %></div> 
+   <div class="card-title bold">Last name: <%= @friend.last_name %></div> 
+   <div class="card-title bold">Email: <%= @friend.email %></div> 
+   <div class="card-title bold">Phone number: <%= @friend.phone %></div> 
+  <div class="card-title bold">Twitter: <%= @friend.twitter %>
+  <div class="card-title bold">User Id: <%= @friend.user_id %></div>
+  </div> 
+  </div>
+</div>
+
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class:'button btn-secondary' %> |
+  <%= link_to "Back to friends", friends_path, class:'button btn-secondary' %>
+  <%= button_to "Destroy this friend", @friend, method: :delete, class:'button btn-danger' %>
+
